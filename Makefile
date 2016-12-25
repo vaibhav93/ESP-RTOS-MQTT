@@ -2,11 +2,6 @@
 
 AR = xtensa-lx106-elf-ar
 CC = xtensa-lx106-elf-gcc
-NM = xtensa-lx106-elf-nm
-CPP = xtensa-lx106-elf-g++
-OBJCOPY = xtensa-lx106-elf-objcopy
-OBJDUMP = xtensa-lx106-elf-objdump
-
 CCFLAGS += 			\
 	-Os			\
 	-g			\
@@ -35,24 +30,16 @@ SDK_INCDIR	:= $(addprefix -I $(SDK_PATH),$(SDK_INCDIR))
 LIB_INCDIR := $(addprefix -I ,$(LIB_INCDIR))
 
 SRC_DIR=lib/MQTTClient lib/MQTTPacket
-BUILD_BASE = build
-BUILD_DIR = lib/MQTTClient lib/MQTTPacket
-#test.o: $(SRC)
-#	$(CC) -o $@ -c $^ $(CCFLAGS) $(SDK_INCDIR) $(LIB_INCDIR) $(LIBS)
-
-# define compile-objects
-# $1/%.o:lib/MQTTClient/%.c
-# 	$(CC) -o $@ -c $^ $(CCFLAGS) $(SDK_INCDIR) $(LIB_INCDIR) $(LIBS)
-# endef
-.PHONY: all
 SRCS := $(foreach sdir,$(SRC_DIR),$(wildcard $(sdir)/*.c))
-objects := $(patsubst %.c,%.o,$(SRCS))
+OBJECTS := $(patsubst %.c,%.o,$(SRCS))
 
-all: $(objects)
+.PHONY: all
 
-$(objects): %.o: %.c
+all: $(OBJECTS)
+
+$(OBJECTS): %.o: %.c
 	$(CC) -o $@ -c $^ $(CCFLAGS) $(SDK_INCDIR) $(LIB_INCDIR) $(LIBS)
 	$(AR) ru libmqtt.a $@
 
 clean:
-	rm -f $(objects) *.a
+	rm -f $(OBJECTS) *.a
