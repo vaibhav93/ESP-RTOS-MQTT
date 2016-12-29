@@ -10,6 +10,7 @@ Despite being excellent projects, it requires some effort to include MQTT in you
 ### Prerequisites
 1. **Xtensa lx106 architecture toolchain** to build the library. If you are using [Espressif lubuntu VM](https://espressif.com/en/support/explore/get-started/esp8266/getting-started-guide), this is already installed and added to your path. If you wish to set up your own, use [esp-open-sdk](https://github.com/pfalcon/esp-open-sdk).
 2. **ESP8266_RTOS_SDK v1.4.0** [Github](https://github.com/espressif/ESP8266_RTOS_SDK)
+
 ### Build
 1. Make sure Xtensa toolchain is added to PATH
 2. Export SDK_PATH with path to Espressif SDK installation.
