@@ -43,3 +43,5 @@ sinclude $(SDK_PATH)/Makefile
  - SSL support
  - esp-open-rtos supprt
  - Add examples
+
+ MIT License
