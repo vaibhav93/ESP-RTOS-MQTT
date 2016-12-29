@@ -13,7 +13,7 @@
 *.a
 *.la
 *.lo
-.output/*
+.output/
 # Shared objects (inc. Windows DLLs)
 *.dll
 *.so
