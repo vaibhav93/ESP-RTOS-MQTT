@@ -1,5 +1,5 @@
 # MQTT library for ESP8266
-#### for Espressif RTOS SDK v1.4.0
+#### for Espressif RTOS SDK v1.4.0 based on [Eclipse Paho](https://eclipse.org/paho/clients/c/embedded/)
 
 This project aims to provide an independent MQTT library which can be seamlessly added to any existing ESP8266 project. It is inspired from
 
