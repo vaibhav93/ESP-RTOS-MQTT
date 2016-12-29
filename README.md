@@ -3,8 +3,8 @@
 
 This project aims to provide an independent MQTT library which can be seamlessly added to any existing ESP8266 project. It is inspired from
 
-  - [esp_mqtt](https://github.com/tuanpmt/esp_mqtt)
-  - [ESP-RTOS-PAHO](https://github.com/baoshi/ESP-RTOS-Paho)
+  - [esp_mqtt](https://github.com/tuanpmt/esp_mqtt) by tuanpmt
+  - [ESP-RTOS-PAHO](https://github.com/baoshi/ESP-RTOS-Paho) by baoshi
 
 Despite being excellent projects, it requires some effort to include MQTT in your own project from these.
 ### Prerequisites
