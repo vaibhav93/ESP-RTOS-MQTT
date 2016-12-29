@@ -39,8 +39,6 @@ INCLUDES += -I $(SDK_PATH)/include/mqtt
 sinclude $(SDK_PATH)/Makefile
 ...
 ```
-### Examples
-I would be uploading examples soon. Meanwhile refer [FreeRTOS example](https://github.com/eclipse/paho.mqtt.embedded-c/tree/develop/MQTTClient-C/samples/FreeRTOS) by Eclipse Paho project which works with little changes pertaining to ESP8266.
 ### Todos
  - SSL support
  - esp-open-rtos supprt
