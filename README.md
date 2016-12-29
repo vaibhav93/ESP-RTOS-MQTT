@@ -25,7 +25,7 @@ $ make && make install
 ```
 LINKFLAGS_eagle.app.v6 = \
 	-L$(SDK_PATH)/lib        \
-    ...
+  ...
   -lmqtt      \
 	-lcirom     \
 	-lcrypto	  \
