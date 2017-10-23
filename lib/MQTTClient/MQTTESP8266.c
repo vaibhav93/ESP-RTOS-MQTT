@@ -118,9 +118,12 @@ int ConnectNetwork(Network* n, char* host, int port)
     struct sockaddr_in addr;
     int ret;
 
-    if (host2addr(host, &(addr.sin_addr)) != 0)
+    if (inet_aton(host, &(addr.sin_addr)) == 0)
     {
-        return -1;
+        if (host2addr(host, &(addr.sin_addr)) != 0)
+        {
+            return -1;
+        }
     }
 
     addr.sin_family = AF_INET;
